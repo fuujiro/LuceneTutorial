@@ -1,0 +1,972 @@
+<DOC>
+<DOCNO>ACM-2009969</DOCNO>
+<TITLE>CrowdLogging: distributed, private, and anonymous search logging</TITLE>
+<AUTHOR>Henry Allen Feild, James Allan, Joshua Glatt</AUTHOR>
+<SOURCE>Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval</SOURCE>
+<TEXT>
+We describe CrowdLogging, an approach for distributed search log collection, storage, and mining, with the dual goals of preserving privacy and making the mined information broadly available. Most search log mining approaches and most privacy enhancing schemes have focused on centralized search logs and methods for disseminating them to third parties. In our approach, a user's search log is encrypted and shared in such a way that (a) the source of a search behavior artifact, such as a query, is unknown and (b) extremely rare artifacts---that is, artifacts more likely to contain private information---are not revealed. The approach works with any search behavior artifact that can be extracted from a search log, including queries, query reformulations, and query-click pairs. In this work, we: (1) present a distributed search log collection, storage, and mining framework; (2) compare several privacy policies, including differential privacy, showing the trade-offs between strong guarantees and the utility of the released data; (3) demonstrate the impact of our approach using two existing research query logs; and (4) describe a pilot study for which we implemented a version of the framework.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2009998</DOCNO>
+<TITLE>Parameterized concept weighting in verbose queries</TITLE>
+<AUTHOR>Michael Bendersky, Donald Metzler, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval</SOURCE>
+<TEXT>
+The majority of the current information retrieval models weight the query concepts (e.g., terms or phrases) in an unsupervised manner, based solely on the collection statistics. In this paper, we go beyond the unsupervised estimation of concept weights, and propose a parameterized concept weighting model. In our model, the weight of each query concept is determined using a parameterized combination of diverse importance features. Unlike the existing supervised ranking methods, our model learns importance weights not only for the explicit query concepts, but also for the latent concepts that are associated with the query through pseudo-relevance feedback. The experimental results on both newswire and web TREC corpora show that our model consistently and significantly outperforms a wide range of state-of-the-art retrieval models. In addition, our model significantly reduces the number of latent concepts used for query expansion compared to the non-parameterized pseudo-relevance feedback based models.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2010026</DOCNO>
+<TITLE>Automatic boolean query suggestion for professional search</TITLE>
+<AUTHOR>Youngho Kim, Jangwon Seo, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval</SOURCE>
+<TEXT>
+In professional search environments, such as patent search or legal search, search tasks have unique characteristics: 1) users interactively issue several queries for a topic, and 2) users are willing to examine many retrieval results, i.e., there is typically an emphasis on recall. Recent surveys have also verified that professional searchers continue to have a strong preference for Boolean queries because they provide a record of what documents were searched. To support this type of professional search, we propose a novel Boolean query suggestion technique. Specifically, we generate Boolean queries by exploiting decision trees learned from pseudo-labeled documents and rank the suggested queries using query quality predictors. We evaluate our algorithm in simulated patent and medical search environments. Compared with a recent effective query generation system, we demonstrate that our technique is effective and general.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2010085</DOCNO>
+<TITLE>Modeling subset distributions for verbose queries</TITLE>
+<AUTHOR>Xiaobing Xue, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval</SOURCE>
+<TEXT>
+Improving verbose (or long) queries poses a new challenge for search systems. Previous techniques mainly focused on two aspects, weighting the important words or phrases and selecting the best subset query. The former does not consider how words and phrases are used in actual subset queries, while the latter ignores alternative subset queries. Recently, a novel reformulation framework has been proposed to transform the original query as a distribution of reformulated queries, which overcomes the disadvantages of previous techniques. In this paper, we apply this framework to verbose queries, where a reformulated query is specified as a subset query. Experiments on TREC collections show that the query distribution based framework outperforms the state-of-the-art techniques.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835458</DOCNO>
+<TITLE>Predicting searcher frustration</TITLE>
+<AUTHOR>Henry A. Feild, James Allan, Rosie Jones</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+When search engine users have trouble finding information, they may become frustrated, possibly resulting in a bad experience (even if they are ultimately successful). In a user study in which participants were given difficult information seeking tasks, half of all queries submitted resulted in some degree of self-reported frustration. A third of all successful tasks involved at least one instance of frustration. By modeling searcher frustration, search engines can predict the current state of user frustration and decide when to intervene with alternative search strategies to prevent the user from becoming more frustrated, giving up, or switching to another search engine. We present several models to predict frustration using features extracted from query logs and physical sensors. We are able to predict frustration with a mean average precision of 65\% from the physical sensors, and 87\% from the query log features.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835461</DOCNO>
+<TITLE>Ranking using multiple document types in desktop search</TITLE>
+<AUTHOR>Jinyoung Kim, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+A typical desktop environment contains many document types (email, presentations, web pages, pdfs, etc.) each with different metadata. Predicting which types of documents a user is looking for in the context of a given query is a crucial part of providing effective desktop search. The problem is similar to selecting resources in distributed IR, but there are some important differences. In this paper, we quantify the impact of type prediction in producing a merged ranking for desktop search and introduce a new prediction method that exploits type-specific metadata. In addition, we show that type prediction performance and search effectiveness can be further enhanced by combining existing methods of type prediction using discriminative learning models. Our experiments employ pseudo-desktop collections and a human computation game for acquiring realistic and reusable queries.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835493</DOCNO>
+<TITLE>Geometric representations for multiple documents</TITLE>
+<AUTHOR>Jangwon Seo, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Combining multiple documents to represent an information object is well-known as an effective approach for many Information Retrieval tasks. For example, passages can be combined to represent a document for retrieval, document clusters are represented using combinations of the documents they contain, and feedback documents can be combined to represent a query model. Various techniques for combination have been introduced, and among them, representation techniques based on concatenation and the arithmetic mean are frequently used. Some recent work has shown the potential of a new representation technique using the geometric mean. However, these studies lack a theoretical foundation explaining why the geometric mean should have advantages for representing multiple documents. In this paper, we show that the arithmetic mean and the geometric mean are approximations to the center of mass in certain geometries, and show empirically that the geometric mean is closer to the center. Through experiments with two IR tasks, we show the potential benefits for geometric representations, including a geometry-based pseudo-relevance feedback method that outperforms state-of-the-art techniques.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835499</DOCNO>
+<TITLE>Evaluating verbose query processing techniques</TITLE>
+<AUTHOR>Samuel Huston, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Verbose or long queries are a small but significant part of the query stream in web search, and are common in other applications such as collaborative question answering (CQA). Current search engines perform well with keyword queries but are not, in general, effective for verbose queries. In this paper, we examine query processing techniques which can be applied to verbose queries prior to submission to a search engine in order to improve the search engine's results. We focus on verbose queries that have sentence-like structure, but are not simple "wh-" questions, and assume the search engine is a "black box." We evaluated the output of two search engines using queries from a CQA service and our results show that, among a broad range of techniques, the most effective approach is to simply reduce the length of the query. This can be achieved effectively by removing "stop structure" instead of only stop words. We show that the process of learning and removing stop structure from a query can be effectively automated.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835521</DOCNO>
+<TITLE>A content based approach for discovering missing anchor text for web search</TITLE>
+<AUTHOR>Xing Yi, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Although anchor text provides very useful information for web search, a large portion of web pages have few or no incoming hyperlinks (anchors), which is known as the anchor text sparsity problem. In this paper, we propose a language modeling based technique for overcoming anchor text sparsity by discovering a web page's plausible missing anchor text from its similar web pages' in-link anchor text. We design experiments with two publicly available TREC web corpora (GOV2 and ClueWeb09) to evaluate different approaches for discovering missing anchor text. Experimental results show that our approach can effectively discover plausible missing anchor terms. We then use the web named page finding task in the TREC Terabyte track to explore the utility of missing anchor text information discovered by our approach for helping retrieval. Experimental results show that our approach can statistically significantly improve retrieval performance, compared with several approaches that only use anchor text aggregated over the web graph.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835602</DOCNO>
+<TITLE>Unsupervised estimation of dirichlet smoothing parameters</TITLE>
+<AUTHOR>Jangwon Seo, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+A standard approach for determining a Dirichlet smoothing parameter is to choose a value which maximizes a retrieval performance metric using training data consisting of queries and relevance judgments. There are, however, situations where training data does not exist or the queries and relevance judgments do not reflect typical user information needs for the application. We propose an unsupervised approach for estimating a Dirichlet smoothing parameter based on collection statistics. We show empirically that this approach can suggest a plausible Dirichlet smoothing parameter value in cases where relevance judgments cannot be used.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835626</DOCNO>
+<TITLE>Learning to rank query reformulations</TITLE>
+<AUTHOR>Van Dang, Michael Bendersky, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Query reformulation techniques based on query logs have recently proven to be effective for web queries. However, when initial queries have reasonably good quality, these techniques are often not reliable enough to identify the helpful reformulations among the suggested queries. In this paper, we show that we can use as few as two features to rerank a list of reformulated queries, or expanded queries to be specific, generated by a log-based query reformulation technique. Our results across five TREC collections suggest that there are consistently more useful reformulations in the first two positions in the new ranked list than there were initially, which leads to statistically significant improvements in retrieval effectiveness.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835637</DOCNO>
+<TITLE>Query term ranking based on dependency parsing of verbose queries</TITLE>
+<AUTHOR>Jae Hyun Park, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Query term ranking approaches are used to select effective terms from a verbose query by ranking terms. Features used for query term ranking and selection in previous work do not consider grammatical relationships between terms. To address this issue, we use syntactic features extracted from dependency parsing results of verbose queries. We also modify the method for measuring the effectiveness of query terms for query term ranking.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1835650</DOCNO>
+<TITLE>Learning to select rankers</TITLE>
+<AUTHOR>Niranjan Balasubramanian, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Combining evidence from multiple retrieval models has been widely studied in the context of of distributed search, metasearch and rank fusion. Much of the prior work has focused on combining retrieval scores (or the rankings) assigned by different retrieval models or ranking algorithms. In this work, we focus on the problem of choosing between retrieval models using performance estimation. We propose modeling the differences in retrieval performance directly by using rank-time features - features that are available to the ranking algorithms - and the retrieval scores assigned by the ranking algorithms. Our experimental results show that when choosing between two rankers, our approach yields significant improvements over the best individual ranker.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1572050</DOCNO>
+<TITLE>Agreement among statistical significance tests for information retrieval evaluation at varying sample sizes</TITLE>
+<AUTHOR>Mark D. Smucker, James Allan, Ben Carterette</AUTHOR>
+<SOURCE>Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Research has shown that little practical difference exists between the randomization, Student's paired t, and bootstrap tests of statistical significance for TREC ad-hoc retrieval experiments with 50 topics. We compared these three tests on runs with topic sizes down to 10 topics. We found that these tests show increasing disagreement as the number of topics decreases. At smaller numbers of topics, the randomization test tended to produce smaller p-values than the t-test for p-values less than 0.1. The bootstrap exhibited a systematic bias towards p-values strictly less than the t-test with this bias increasing as the number of topics decreased. We recommend the use of the randomization test although the t-test appears to be suitable even when the number of topics is small.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1572139</DOCNO>
+<TITLE>Transforming patents into prior-art queries</TITLE>
+<AUTHOR>Xiaoibng Xue, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Searching for prior-art patents is an essential step for the patent examiner to validate or invalidate a patent application. In this paper, we consider the whole patent as the query, which reduces the burden on the user, and also makes many more potential search features available. We explore how to automatically transform the query patent into an effective search query, especially focusing on the effect of different patent fields. Experiments show that the background summary of a patent is the most useful source of terms for generating a query, even though most previous work used the patent claims.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1572140</DOCNO>
+<TITLE>Two-stage query segmentation for information retrieval</TITLE>
+<AUTHOR>Michael Bendersky, W. Bruce Croft, David A. Smith</AUTHOR>
+<SOURCE>Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Modeling term dependence has been shown to have a significant positive impact on retrieval. Current models, however, use sequential term dependencies, leading to an increased query latency, especially for long queries. In this paper, we examine two query segmentation models that reduce the number of dependencies. We find that two-stage segmentation based on both query syntactic structure and external information sources such as query logs, attains retrieval performance comparable to the sequential dependence model, while achieving a 50\% reduction in query latency.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1390339</DOCNO>
+<TITLE>Effective and efficient user interaction for long queries</TITLE>
+<AUTHOR>Giridhar Kumaran, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 31st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Handling long queries can involve either pruning the query to retain only the important terms (reduction), or expanding the query to include related concepts (expansion). While automatic techniques to do so exist, roughly 25\% performance improvements in terms of MAP have been realized in past work through interactive variants. We show that selectively reducing or expanding a query leads to an average improvement of 51\% in MAP over the baseline for standard TREC test collections. We demonstrate how user interaction can be used to achieve this improvement. Most interaction techniques present users with a fixed number of options for all queries. We achieve improvements by interacting less with the user, i.e., we present techniques to identify the optimal number of options to present to users, resulting in an interface with an average of 70\% fewer options to consider. Previous algorithms supporting interactive reduction and expansion are exponential in nature. To extend their utility to operational environments, we present techniques to make the complexity of the algorithms polynomial. We finally present an analysis of long queries that continue to exhibit poor performance in spite of our new techniques.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1390376</DOCNO>
+<TITLE>A cluster-based resampling method for pseudo-relevance feedback</TITLE>
+<AUTHOR>Kyung Soon Lee, W. Bruce Croft, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 31st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Typical pseudo-relevance feedback methods assume the top-retrieved documents are relevant and use these pseudo-relevant documents to expand terms. The initial retrieval set can, however, contain a great deal of noise. In this paper, we present a cluster-based resampling method to select better pseudo-relevant documents based on the relevance model. The main idea is to use document clusters to find dominant documents for the initial retrieval set, and to repeatedly feed the documents to emphasize the core topics of a query. Experimental results on large-scale web TREC collections show significant improvements over the relevance model. For justification of the resampling approach, we examine relevance density of feedback documents. A higher relevance density will result in greater retrieval accuracy, ultimately approaching true relevance feedback. The resampling approach shows higher relevance density than the baseline relevance model on all collections, resulting in better retrieval accuracy in pseudo-relevance feedback. This result indicates that the proposed method is effective for pseudo-relevance feedback.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1390416</DOCNO>
+<TITLE>Retrieval models for question and answer archives</TITLE>
+<AUTHOR>Xiaobing Xue, Jiwoon Jeon, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 31st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Retrieval in a question and answer archive involves finding good answers for a user's question. In contrast to typical document retrieval, a retrieval model for this task can exploit question similarity as well as ranking the associated answers. In this paper, we propose a retrieval model that combines a translation-based language model for the question part with a query likelihood approach for the answer part. The proposed model incorporates word-to-word translation probabilities learned through exploiting different sources of information. Experiments show that the proposed translation based language model for the question part outperforms baseline methods significantly. By combining with the query likelihood language model for the answer part, substantial additional effectiveness improvements are obtained.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1390419</DOCNO>
+<TITLE>Discovering key concepts in verbose queries</TITLE>
+<AUTHOR>Michael Bendersky, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 31st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Current search engines do not, in general, perform well with longer, more verbose queries. One of the main issues in processing these queries is identifying the key concepts that will have the most impact on effectiveness. In this paper, we develop and evaluate a technique that uses query-dependent, corpus-dependent, and corpus-independent features for automatic extraction of key concepts from verbose queries. We show that our method achieves higher accuracy in the identification of key concepts than standard weighting methods such as inverse document frequency. Finally, we propose a probabilistic model for integrating the weighted key concepts identified by our method into a query, and demonstrate that this integration significantly improves retrieval effectiveness for a large set of natural language description queries derived from TREC topics on several newswire and web collections.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1390432</DOCNO>
+<TITLE>Local text reuse detection</TITLE>
+<AUTHOR>Jangwon Seo, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 31st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Text reuse occurs in many different types of documents and for many different reasons. One form of reuse, duplicate or near-duplicate documents, has been a focus of researchers because of its importance in Web search. Local text reuse occurs when sentences, facts or passages, rather than whole documents, are reused and modified. Detecting this type of reuse can be the basis of new tools for text analysis. In this paper, we introduce a new approach to detecting local text reuse and compare it to other approaches. This comparison involves a study of the amount and type of reuse that occurs in real documents, including TREC newswire and blog collections.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1390445</DOCNO>
+<TITLE>Evaluation over thousands of queries</TITLE>
+<AUTHOR>Ben Carterette, Virgil Pavlu, Evangelos Kanoulas, Javed A. Aslam, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 31st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Information retrieval evaluation has typically been performed over several dozen queries, each judged to near-completeness. There has been a great deal of recent work on evaluation over much smaller judgment sets: how to select the best set of documents to judge and how to estimate evaluation measures when few judgments are available. In light of this, it should be possible to evaluate over many more queries without much more total judging effort. The Million Query Track at TREC 2007 used two document selection algorithms to acquire relevance judgments for more than 1,800 queries. We present results of the track, along with deeper analysis: investigating tradeoffs between the number of queries and number of judgments shows that, up to a point, evaluation over more queries with fewer judgments is more cost-effective and as reliable as fewer queries with more judgments. Total assessor effort can be reduced by 95\% with no appreciable increase in evaluation errors.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277758</DOCNO>
+<TITLE>An interactive algorithm for asking and incorporating feature feedback into support vector machines</TITLE>
+<AUTHOR>Hema Raghavan, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Standard machine learning techniques typically require ample training data in the form of labeled instances. In many situations it may be too tedious or costly to obtain sufficient labeled data for adequate classifier performance. However, in text classification, humans can easily guess the relevance of features, that is, words that are indicative of a topic, thereby enabling the classifier to focus its feature weights more appropriately in the absence of sufficient labeled data. We will describe an algorithm for tandem learning that begins with a couple of labeled instances, and then at each iteration recommends features and instances for a human to label. Tandem learning using an "oracle" results in much better performance than learning on only features or only instances. We find that humans can emulate the oracle to an extent that results in performance (accuracy) comparable to that of the oracle. Our unique experimental design helps factor out system error from human error, leading to a better understanding of when and why interactive feature selection works.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277774</DOCNO>
+<TITLE>Efficient document retrieval in main memory</TITLE>
+<AUTHOR>Trevor Strohman, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Disk access performance is a major bottleneck in traditional information retrieval systems. Compared to system memory, disk bandwidth is poor, and seek times are worse. We circumvent this problem by considering query evaluation strategies in main memory. We show how new accumulator trimming techniques combined with inverted list skipping can produce extremely high performance retrieval systems without resorting to methods that may harm effectiveness. We evaluate our techniques using Galago, a new retrieval system designed for efficient query processing. Our system achieves a 69\% improvement in query throughput over previous methods.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277796</DOCNO>
+<TITLE>Latent concept expansion using markov random fields</TITLE>
+<AUTHOR>Donald Metzler, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Query expansion, in the form of pseudo-relevance feedback or relevance feedback, is a common technique used to improve retrieval effectiveness. Most previous approaches have ignored important issues, such as the role of features and the importance of modeling term dependencies. In this paper, we propose a robust query expansion technique based onthe Markov random field model for information retrieval. The technique, called latent concept expansion, provides a mechanism for modeling term dependencies during expansion. Furthermore, the use of arbitrary features within the model provides a powerful framework for going beyond simple term occurrence features that are implicitly used by most other expansion techniques. We evaluate our technique against relevance models, a state-of-the-art language modeling query expansion technique. Our model demonstrates consistent and significant improvements in retrieval effectiveness across several TREC data sets. We also describe how our technique can be used to generate meaningful multi-term concepts for tasks such as query suggestion/reformulation.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277835</DOCNO>
+<TITLE>Query performance prediction in web search environments</TITLE>
+<AUTHOR>Yun Zhou, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Current prediction techniques, which are generally designed for content-based queries and are typically evaluated on relatively homogenous test collections of small sizes, face serious challenges in web search environments where collections are significantly more heterogeneous and different types of retrieval tasks exist. In this paper, we present three techniques to address these challenges. We focus on performance prediction for two types of queries in web search environments: content-based and Named-Page finding. Our evaluation is mainly performed on the GOV2 collection. In addition to evaluating our models for the two types of queries separately, we consider a more challenging and realistic situation that the two types of queries are mixed together without prior information on query types. To assist prediction under the mixed-query situation, a novel query classifier is adopted. Results show that our prediction of web query performance is substantially more accurate than the current state-of-the-art prediction techniques. Consequently, our paper provides a practical approach to performance prediction in real-world web settings.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277868</DOCNO>
+<TITLE>Recommending citations for academic papers</TITLE>
+<AUTHOR>Trevor Strohman, W. Bruce Croft, David Jensen</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We approach the problem of academic literature search by considering an unpublished manuscript as a query to a search system. We use the text of previous literature as well as the citation graph that connects it to find relevant related material. We evaluate our technique with manual and automatic evaluation methods, and find an order of magnitude improvement in mean average precision as compared to a text similarity baseline.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277920</DOCNO>
+<TITLE>Matching resumes and jobs based on relevance models</TITLE>
+<AUTHOR>Xing Yi, James Allan, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We investigate the difficult problem of matching semi-structured resumes and jobs in a large scale real-world collection. We compare standard approaches to Structured Relevance Models (SRM), an extensionof relevance-based language model for modeling and retrieving semi-structured documents. Preliminary experiments show that the SRM approach achieved promising performance and performed better than typical unstructured relevance models.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277922</DOCNO>
+<TITLE>A comparison of sentence retrieval techniques</TITLE>
+<AUTHOR>Niranjan Balasubramanian, James Allan, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Identifying redundant information in sentences is useful for several applications such as summarization, document provenance, detecting text reuse and novelty detection. The task of identifying redundant information in sentences is defined as follows: Given a query sentence the task is to retrieve sentences from a given collection that express all or some subset of the information present in the query sentence. Sentence retrieval techniques rank sentences based on some measure of their similarity to a query. The effectiveness of such techniques depends on the similarity measure used to rank sentences. An effective retrieval model should be able to handle low word overlap between query and candidate sentences and go beyond just word overlap. Simple language modeling techniques like query likelihood retrieval have outperformed TF-IDF and word overlap based methods for ranking sentences. In this paper, we compare the performance of sentence retrieval using different language modeling techniques for the problem of identifying redundant information.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1277947</DOCNO>
+<TITLE>Using similarity links as shortcuts to relevant web pages</TITLE>
+<AUTHOR>Mark D. Smucker, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Successful navigation from a relevant web page to other relevant pages depends on the page linking to other relevant pages. We measured the distance to travel from relevant page to relevant page and found a bimodal distribution of distances peaking at 4 and 15 hops. In an attempt to make it easier to navigate among relevant pages, we added content similarity links to pages. With these additional links, significantly more relevant documents were close to each other. A browser plug-in or other tool that provides links to pages similar to a given page should increase the ability of web users to find relevant pages via navigation.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148204</DOCNO>
+<TITLE>LDA-based document models for ad-hoc retrieval</TITLE>
+<AUTHOR>Xing Wei, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Search algorithms incorporating some form of topic model have a long history in information retrieval. For example, cluster-based retrieval has been studied since the 60s and has recently produced good results in the language model framework. An approach to building topic models based on a formal generative model of documents, Latent Dirichlet Allocation (LDA), is heavily cited in the machine learning literature, but its feasibility and effectiveness in information retrieval is mostly unknown. In this paper, we study how to efficiently use LDA to improve ad-hoc retrieval. We propose an LDA-based document model within the language modeling framework, and evaluate it on several TREC collections. Gibbs sampling is employed to conduct approximate inference in LDA and the computational complexity is analyzed. We show that improvements over retrieval using cluster-based models can be obtained with reasonable efficiency.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148212</DOCNO>
+<TITLE>A framework to predict the quality of answers with non-textual features</TITLE>
+<AUTHOR>Jiwoon Jeon, W. Bruce Croft, Joon Ho Lee, Soyeon Park</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+New types of document collections are being developed by various web services. The service providers keep track of non-textual features such as click counts. In this paper, we present a framework to use non-textual features to predict the quality of documents. We also show our quality measure can be successfully incorporated into the language modeling-based retrieval model. We test our approach on a collection of question and answer pairs gathered from a community based question answering service where people ask and answer questions. Experimental results using our quality measure show a significant improvement over our baseline.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148219</DOCNO>
+<TITLE>Minimal test collections for retrieval evaluation</TITLE>
+<AUTHOR>Ben Carterette, James Allan, Ramesh Sitaraman</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Accurate estimation of information retrieval evaluation metrics such as average precision require large sets of relevance judgments. Building sets large enough for evaluation of real-world implementations is at best inefficient, at worst infeasible. In this work we link evaluation with test collection construction to gain an understanding of the minimal judging effort that must be done to have high confidence in the outcome of an evaluation. A new way of looking at average precision leads to a natural algorithm for selecting documents to judge and allows us to estimate the degree of confidence by defining a distribution over possible document judgments. A study with annotators shows that this method can be used by a small group of researchers to rank a set of systems in under three hours with 95\% confidence. Information retrieval metrics such as average precision require large sets of relevance judgments to be accurately estimated. Building these sets is infeasible and often inefficient for many real-world retrieval implementations. We present a new way of looking at average precision that allows us to estimate the confidence in an evaluation based on the size of the test collection. We use this to build an algorithm for selecting the best documents to judge to have maximum confidence in an evaluation with a minimal number of relevance judgments. A study with annotators shows how the algorithm can be used by a small group of researchers to quickly rank a set of systems with 95\% confidence.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148250</DOCNO>
+<TITLE>Find-similar: similarity browsing as a search tool</TITLE>
+<AUTHOR>Mark D. Smucker, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Search systems have for some time provided users with the ability to request documents similar to a given document. Interfaces provide this feature via a link or button for each document in the search results. We call this feature find-similar or similarity browsing . We examined find-similar as a search tool, like relevance feedback, for improving retrieval performance. Our investigation focused on find-similar's document-to-document similarity, the reexamination of documents during a search, and the user's browsing pattern. Find-similar with a query-biased similarity, avoiding the reexamination of documents, and a breadth-like browsing pattern achieved a 23\% increase in the arithmetic mean average precision and a 66\% increase in the geometric mean average precision over our baseline retrieval. This performance matched that of a more traditionally styled iterative relevance feedback technique.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148305</DOCNO>
+<TITLE>Simple questions to improve pseudo-relevance feedback results</TITLE>
+<AUTHOR>Giridhar Kumaran, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We explore interactive methods to further improve the performance of pseudo-relevance feedback. Studies \citeria suggest that new methods for tackling difficult queries are required. Our approach is to gather more information about the query from the user by asking her simple questions. The equally simple responses are used to modify the original query. Our experiments using the TREC Robust Track queries show that we can obtain a significant improvement in mean average precision averaging around 5\% over pseudo-relevance feedback. This improvement is also spread across more queries compared to ordinary pseudo-relevance feedback, as suggested by geometric mean average precision.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148310</DOCNO>
+<TITLE>Representing clusters for retrieval</TITLE>
+<AUTHOR>Xiaoyong Liu, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1148324</DOCNO>
+<TITLE>Lightening the load of document smoothing for better language modeling retrieval</TITLE>
+<AUTHOR>Mark D. Smucker, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We hypothesized that language modeling retrieval would improve if we reduced the need for document smoothing to provide an inverse document frequency (IDF) like effect. We created inverse collection frequency (ICF) weighted query models as a tool to partially separate the IDF-like role from document smoothing. Compared to maximum likelihood estimated (MLE) queries, the ICF weighted queries achieved a 6.4\\% improvement in mean average precision on description queries. The ICF weighted queries performed better with less document smoothing than that required by MLE queries. Language modeling retrieval may benefit from a means to separately incorporate an IDF-like behavior outside of document smoothing.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1076074</DOCNO>
+<TITLE>Optimization strategies for complex queries</TITLE>
+<AUTHOR>Trevor Strohman, Howard Turtle, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 28th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Previous research into the efficiency of text retrieval systems has dealt primarily with methods that consider inverted lists in sequence; these methods are known as term-at-a-time methods. However, the literature for optimizing document-at-a-time systems remains sparse.We present an improvement to the max_score optimization, which is the most efficient known document-at-a-time scoring method. Like max_score, our technique, called term bounded max_score, is guaranteed to return exactly the same scores and documents as an unoptimized evaluation, which is particularly useful for query model research. We simulated our technique to explore the problem space, then implemented it in Indri, our large scale language modeling search engine. Tests with the GOV2 corpus on title queries show our method to be 23\% faster than max_score alone, and 61\% faster than our document-at-a-time baseline. Our optimized query times are competitive with conventional term-at-a-time systems on this year's TREC Terabyte task.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1076109</DOCNO>
+<TITLE>When will information retrieval be good enough?</TITLE>
+<AUTHOR>James Allan, Ben Carterette, Joshua Lewis</AUTHOR>
+<SOURCE>Proceedings of the 28th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We describe a user study that examined the relationship between the quality of an Information Retrieval system and the effectiveness of its users in performing a task. The task involves finding answer facets of questions pertaining to a collection of newswire documents over a six month period. We artificially created sets of ranked lists at increasing levels of quality by blending the output of a state-of-the-art retrieval system with truth data created by annotators. Subjects performed the task by using these ranked lists to guide their labeling of answer passages in the retrieved articles. We found that as system accuracy improves, subject time on task and error rate decrease, and the rate of finding new correct answers increases. There is a large intermediary region in which the utility difference is not significant; our results suggest that there is some threshold of accuracy for this task beyond which user utility improves rapidly, but more experiments are needed to examine the area around that threshold closely.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1076115</DOCNO>
+<TITLE>A Markov random field model for term dependencies</TITLE>
+<AUTHOR>Donald Metzler, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 28th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+This paper develops a general, formal framework for modeling term dependencies via Markov random fields. The model allows for arbitrary text features to be incorporated as evidence. In particular, we make use of features based on occurrences of single terms, ordered phrases, and unordered phrases. We explore full independence, sequential dependence, and full dependence variants of the model. A novel approach is developed to train the model that directly maximizes the mean average precision rather than maximizing the likelihood of the training data. Ad hoc retrieval experiments are presented on several newswire and web collections, including the GOV2 collection used at the TREC 2004 Terabyte Track. The results show significant improvements are possible by modeling dependencies, especially on the larger web collections.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1076156</DOCNO>
+<TITLE>Finding semantically similar questions based on their answers</TITLE>
+<AUTHOR>Jiwoon Jeon, W. Bruce Croft, Joon Ho Lee</AUTHOR>
+<SOURCE>Proceedings of the 28th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+A large number of question and answer pairs can be collected from question and answer boards and FAQ pages on the Web. This paper proposes an automatic method of finding the questions that have the same meaning. The method can detect semantically similar questions that have little word overlap because it calculates question-question similarities by using the corresponding answers as well as the questions. We develop two different similarity measures based on language modeling and compare them with the traditional similarity measures. Experimental results show that semantically similar questions pairs can be effectively found with the proposed similarity measures.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1076190</DOCNO>
+<TITLE>The recap system for identifying information flow</TITLE>
+<AUTHOR>Donald Metzler, Yaniv Bernstein, W. Bruce Croft, Alistair Moffat, Justin Zobel</AUTHOR>
+<SOURCE>Proceedings of the 28th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1009026</DOCNO>
+<TITLE>Cluster-based retrieval using language models</TITLE>
+<AUTHOR>Xiaoyong Liu, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Previous research on cluster-based retrieval has been inconclusive as to whether it does bring improved retrieval effectiveness over document-based retrieval. Recent developments in the language modeling approach to IR have motivated us to re-examine this problem within this new retrieval framework. We propose two new models for cluster-based retrieval and evaluate them on several TREC collections. We show that cluster-based retrieval can perform consistently across collections of realistic size, and significant improvements over document-based retrieval can be obtained in a fully automatic manner and without relevance information provided by human.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1009044</DOCNO>
+<TITLE>Text classification and named entities for new event detection</TITLE>
+<AUTHOR>Giridhar Kumaran, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+New Event Detection is a challenging task that still offers scope for great improvement after years of effort. In this paper we show how performance on New Event Detection (NED) can be improved by the use of text classification techniques as well as by using named entities in a new way. We explore modifications to the document representation in a vector space-based NED system. We also show that addressing named entities preferentially is useful only in certain situations. A combination of all the above results in a multi-stage NED system that performs much better than baseline single-stage NED systems.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1009098</DOCNO>
+<TITLE>Answer models for question answering passage retrieval</TITLE>
+<AUTHOR>Andrés Corrada-Emmanuel, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Answer patterns have been shown to improve the perfor-mance of open-domain factoid QA systems. Their use, however, requires either constructing the patterns manually or developing algorithms for learning them automatically. We present here a simpler approach that extends the techniques of language modeling to create answer models. These are language models trained on the correct answers to training questions. We show how they fit naturally into a probabilis-tic model for answer passage retrieval and demonstrate their effectiveness on the TREC 2002 QA Corpus.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1009110</DOCNO>
+<TITLE>Formal multiple-bernoulli models for language modeling</TITLE>
+<AUTHOR>Donald Metzler, Victor Lavrenko, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1009114</DOCNO>
+<TITLE>Automatic recognition of reading levels from user queries</TITLE>
+<AUTHOR>Xiaoyong Liu, W. Bruce Croft, Paul Oh, David Hart</AUTHOR>
+<SOURCE>Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-1008996</DOCNO>
+<TITLE>Evaluating high accuracy retrieval techniques</TITLE>
+<AUTHOR>Chirag Shah, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Although information retrieval research has always been concerned with improving the effectiveness of search, in some applications, such as information analysis, a more specific requirement exists for high accuracy retrieval. This means that achieving high precision in the top document ranks is paramount. In this paper we present work aimed at achieving high accuracy in ad-hoc document retrieval by incorporating approaches from question answering(QA). We focus on getting the first relevant result as high as possible in the ranked list and argue that traditional precision and recall are not appropriate measures for evaluatin this task. We instead use the mean reciprocal rank(MRR) of the first relevant result. We evaluate three different methods for modifying queries to achieve high accuracy. The experiments done on TREC data provide support for the approach of using MRR and incorporating QA techniques for getting high accuracy in ad-hoc retrieval task.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-860437</DOCNO>
+<TITLE>Salton Award Lecture - Information retrieval and computer science: an evolving relationship</TITLE>
+<AUTHOR>W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval</SOURCE>
+<TEXT>
+Following the tradition of these acceptance talks, I will be giving my thoughts on where our field is going. Any discussion of the future of information retrieval (IR) research, however, needs to be placed in the context of its history and relationship to other fields. Although IR has had a very strong relationship with library and information science, its relationship to computer science (CS) and its relative standing as a sub-discipline of CS has been more dynamic. IR is quite an old field, and when a number of CS departments were forming in the 60s, it was not uncommon for a faculty member to be pursuing research related to IR. Early ACM curriculum recommendations for CS contained courses on information retrieval, and encyclopedias described IR and database systems as different aspects of the same field. By the 70s, there were only a few IR researchers in CS departments in the U.S., database systems was a separate (and thriving) field, and many felt that IR had stagnated and was largely irrelevant. The truth, in fact, was far from that. The IR research community was a small, but dedicated, group of researchers in the U.S. and Europe who were motivated by a desire to understand the process of information retrieval and to build systems that would help people find the right information in text databases. This was (and is) a hard goal and led to different evaluation metrics and methodologies than the database community. Progress in the field was hampered by a lack of large-scale testbeds and tests were limited to databases containing at most a few hundred document abstracts. In the 80s AI boom, IR was still not a mainstream area, despite its focus on a human task involving natural language. IR focused on a statistical approach to language rather than the much more popular knowledge-based approach. The fact that IR conferences mix papers on effectiveness as measured by human judgments with papers measuring performance of file organizations for large-scale systems has meant that IR has always been difficult to classify into simple categories such as "systems" or "AI" that are often used in CS departments. Since the early 90s, just about everything has changed. Large, full-text databases were finally made available for experimentation through DARPA funding and TREC. This has had an enormous positive impact on the quantity and quality of IR research. The advent of the Web search engine has validated the longstanding claims made by IR researchers that simple queries and ranking were the right techniques for information access in a largely unstructured information world. What has not changed is that there are still relatively few IR researchers in CS departments. There are, however, many more people in CS departments doing IR-related research, which is just about the same thing. Conferences in databases, machine learning, computational linguistics, and data mining publish a number of IR papers done by people who would not primarily consider themselves as IR researchers. Given that there is an increasing diffusion of IR ideas into the CS community, it is worth stating what IR, as a field of CS, has accomplished: Search engines have become the infrastructure for much of information access in our society. IR has provided the basic research on the algorithms and data structures for these engines, and continues to develop new capabilities such as cross-lingual search, distributed search, question answering, and topic detection and tracking. IR championed the statistical approach to language long before it was accepted by other researchers working on language technologies. Statistical NLP is now mainstream and results from that field are being used to improve IR systems (in question answering, for example). IR focused on evaluation as a research area, and developed an evaluation methodology based on large, standardized testbeds and comparison with human judgments that has been adopted by researchers in a number of other language technology areas. IR, because of its focus on measuring success based on human judgments, has always acknowledged the importance of the user and interaction as a part of information access. This led to a number of contributions to the design of query and search interfaces and learning techniques based on user feedback. Although these achievements are important, the long-term goals of the IR field have not yet been met. What are those goals? One possibility that is often mentioned is the MEMEX of Vannevar Bush [1]. Another, more recent, statement of long-term challenges was made in the report of the IR Challenges Workshop [2]: Global Information Access: Satisfy human information needs through natural, efficient interaction with an automated system that leverages world-wide structured and unstructured data in any language. Contextual Retrieval; Combine search technologies and knowledge about query and user context into a single framework in order to provide the most appropriate answer for a user's information need. These goals are, in fact, very similar to long-term challenges coming out of other CS fields. For example, Jim Gray, a Turing Award winner from the database area, mentioned in his address a personal and world MEMEX as long-term goals for his field and CS in general [3]. IR's long-term goals are clearly important long-term goals for the whole of CS, and achieving those goals will involve everyone interested in the general area of information management and retrieval. Rather than talking about what IR can do in isolation to progress towards its goals, I would prefer to talk about what IR can do in collaboration with other areas. There are many examples of potential collaborative research areas. Collaborations with researchers from the NLP and information extraction communities have been developing for some time in order to study topics such as advanced question answering. On the other hand, not enough has been done to work with the database community to develop probabilistic retrieval models for unstructured, semi-structured, and structured data. There have been a number of attempts to combine IR and database functionality, none of which has been particularly successful. Most recently, some groups have been working on combining IR search with XML documents, but what is needed is a comprehensive examination of the issues and problems by teams from both areas working together, and the creation of new testbeds that can be used to evaluate proposed models. The time is right for such collaborations. Another example of where database, IR, and networking people can work together is in the development of distributed, heterogeneous information systems. This requires significant new research in areas like peer-to-peer architectures, semantic heterogeneity, automatic metadata generation, and retrieval models. If the information systems described above are extended to include new data types such as video, images, sound, and the whole range of scientific data (such as from the biosciences, geoscience, and astronomy), then a broad range of new challenges are added that need to be tackled in collaboration with people who know about these types of data. There should also be more cooperation between the data mining, IR, and summarization communities to tackle the core problem of defining what is new and interesting in streams of data. These and other similar collaborations will the basis for the future development of the IR field. We will continue to work on research problems that specifically interest us, but this research will increasingly be in the context of larger efforts. IR concepts and IR research will be an important part of the evolving mix of CS expertise that will be used to solve the "grand" challenges.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-860479</DOCNO>
+<TITLE>Table extraction using conditional random fields</TITLE>
+<AUTHOR>David Pinto, Andrew McCallum, Xing Wei, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval</SOURCE>
+<TEXT>
+The ability to find tables and extract information from them is a necessary component of data mining, question answering, and other information retrieval tasks. Documents often contain tables in order to communicate densely packed, multi-dimensional information. Tables do this by employing layout patterns to efficiently indicate fields and records in two-dimensional form.Their rich combination of formatting and content present difficulties for traditional language modeling techniques, however. This paper presents the use of conditional random fields (CRFs) for table extraction, and compares them with hidden Markov models (HMMs). Unlike HMMs, CRFs support the use of many rich and overlapping layout and language features, and as a result, they perform significantly better. We show experimental results on plain-text government statistical reports in which tables are located with 92\% F1, and their constituent lines are classified into 12 table-related categories with 94\% accuracy. We also discuss future work on undirected graphical models for segmenting columns, finding cells, and classifying them as data cells or label cells.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-860493</DOCNO>
+<TITLE>Retrieval and novelty detection at the sentence level</TITLE>
+<AUTHOR>James Allan, Courtney Wade, Alvaro Bolivar</AUTHOR>
+<SOURCE>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval</SOURCE>
+<TEXT>
+Previous research in novelty detection has focused on the task of finding novel material, given a set or stream of documents on a certain topic. This study investigates the more difficult two-part task defined by the TREC 2002 novelty track: given a topic and a group of documents relevant to that topic, 1) find the relevant sentences from the documents, and 2) find the novel sentences from the collection of relevant sentences. Our research shows that the former step appears to be the more difficult part of this task, and that the performance of novelty measures is very sensitive to the presence of non-relevant sentences.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-860548</DOCNO>
+<TITLE>Stemming in the language modeling framework</TITLE>
+<AUTHOR>James Allan, Giridhar Kumaran</AUTHOR>
+<SOURCE>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-860549</DOCNO>
+<TITLE>Generating hierarchical summaries for web searches</TITLE>
+<AUTHOR>Dawn J. Lawrie, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval</SOURCE>
+<TEXT>
+Hierarchies provide a means of organizing, summarizing and accessing information. We describe a method for automatically generating hierarchies from small collections of text, and then apply this technique to summarizing the documents retrieved by a search engine.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-564394</DOCNO>
+<TITLE>Improving realism of topic tracking evaluation</TITLE>
+<AUTHOR>Anton Leuski, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Topic tracking and information filtering are models of interactive tasks, but their evaluations are generally done in a way that does not reflect likely usage. The models either force frequent judgments or disallow any at all, assume the user is always available to make a judgment, and do not allow for user fatigue. In this study we extend the evaluation framework for topic tracking to incorporate those more realistic issues. We demonstrate that tracking can be done in a realistic interactive setting with minimal impact on tracking cost and with substantial reduction in required interaction.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-564408</DOCNO>
+<TITLE>Cross-lingual relevance models</TITLE>
+<AUTHOR>Victor Lavrenko, Martin Choquette, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We propose a formal model of Cross-Language Information Retrieval that does not rely on either query translation or document translation. Our approach leverages recent advances in language modeling to directly estimate an accurate topic model in the target language, starting with a query in the source language. The model integrates popular techniques of disambiguation and query expansion in a unified formal framework. We describe how the topic model can be estimated with either a parallel corpus or a dictionary. We test the framework by constructing Chinese topic models from English queries and using them in the CLIR task of TREC9. The model achieves performance around 95\% of the strong mono-lingual baseline in terms of average precision. In initial precision, our model outperforms the mono-lingual baseline by 20\%. The main contribution of this work is the unified formal model which integrates techniques that are essential for effective Cross-Language Retrieval.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-564429</DOCNO>
+<TITLE>Predicting query performance</TITLE>
+<AUTHOR>Steve Cronen-Townsend, Yun Zhou, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We develop a method for predicting query performance by computing the relative entropy between a query language model and the corresponding collection language model. The resulting clarity score measures the coherence of the language usage in documents whose models are likely to generate the query. We suggest that clarity scores measure the ambiguity of a query with respect to a collection of documents and show that they correlate positively with average precision in a variety of TREC test sets. Thus, the clarity score may be used to identify ineffective queries, on average, without relevance information. We develop an algorithm for automatically setting the clarity score threshold between predicted poorly-performing queries and acceptable queries and validate it using TREC data. In particular, we compare the automatic thresholds to optimum thresholds and also check how frequently results as good are achieved in sampling experiments that randomly assign queries to the two classes.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-564430</DOCNO>
+<TITLE>Using part-of-speech patterns to reduce query ambiguity</TITLE>
+<AUTHOR>James Allan, Hema Raghavan</AUTHOR>
+<SOURCE>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Query ambiguity is a generally recognized problem, particularly in Web environments where queries are commonly only one or two words in length. In this study, we explore one technique that finds commonly occurring patterns of parts of speech near a one-word query and allows them to be transformed into clarification questions. We use a technique derived from statistical language modeling to show that the clarification queries will reduce ambiguity much of the time, and often quite substantially.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-564441</DOCNO>
+<TITLE>Task orientation in question answering</TITLE>
+<AUTHOR>Vanessa Murdock, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-564465</DOCNO>
+<TITLE>A critical examination of TDT's cost function</TITLE>
+<AUTHOR>R. Manmatha, Ao Feng, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Topic Detection and Tracking (TDT) tasks are evaluated using a cost function. The standard TDT cost function assumes a constant probability of relevance P (rel) across all topics. In practice, P (rel) varies widely across topics. We argue using both theoretical and experimental evidence that the cost function should be modified to account for the varying P (rel).
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-383954</DOCNO>
+<TITLE>Temporal summaries of new topics</TITLE>
+<AUTHOR>James Allan, Rahul Gupta, Vikas Khandelwal</AUTHOR>
+<SOURCE>Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We discuss technology to help a person monitor changes in news coverage over time. We define temporal summaries of news stories as extracting a single sentence from each event within a news topic, where the stories are presented one at a time and sentences from a story must be ranked before the next story can be considered. We explain a method for evaluation, and describe an evaluation corpus that we have built. We also propose several methods for constructing temporal summaries and evaluate their effectiveness in comparison to degenerate cases. We show that simple approaches are effective, but that the problem is far from solved.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-383972</DOCNO>
+<TITLE>Relevance based language models</TITLE>
+<AUTHOR>Victor Lavrenko, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We explore the relation between classical probabilistic models of information retrieval and the emerging language modeling approaches. It has long been recognized that the primary obstacle to effective performance of classical models is the need to estimate a relevance model : probabilities of words in the relevant class. We propose a novel technique for estimating these probabilities using the query alone. We demonstrate that our technique can produce highly accurate relevance models, addressing important notions of synonymy and polysemy. Our experiments show relevance models outperforming baseline language modeling systems on TREC retrieval and TDT tracking tasks. The main contribution of this work is an effective formal method for estimating a relevance model with no training data.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-384022</DOCNO>
+<TITLE>Finding topic words for hierarchical summarization</TITLE>
+<AUTHOR>Dawn Lawrie, W. Bruce Croft, Arnold Rosenberg</AUTHOR>
+<SOURCE>Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Hierarchies have long been used for organization, summarization, and access to information. In this paper we define summarization in terms of a probabilistic language model and use the definition to explore a new technique for automatically generating topic hierarchies by applying a graph-theoretic algorithm, which is an approximation of the Dominating Set Problem. The algorithm efficiently chooses terms according to a language model. We compare the new technique to previous methods proposed for constructing topic hierarchies including subsumption and lexical hierarchies, as well as the top TF.IDF terms. Our results show that the new technique consistently performs as well as or better than these other techniques. They also show the usefulness of hierarchies compared with a list of terms.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-345674</DOCNO>
+<TITLE>TimeMine (demonstration session): visualizing automatically constructed timelines</TITLE>
+<AUTHOR>Russell Swan, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 23rd annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-345546</DOCNO>
+<TITLE>Automatic generation of overview timelines</TITLE>
+<AUTHOR>Russell Swan, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 23rd annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+We present a statistical model of feature occurrence over time, and develop tests based on classical hypothesis testing for significance of term appearance on a given date. Using additional classical hypothesis testing we are able to combine these terms to generate “topics” as defined by the Topic Detection and Tracking study. The groupings of terms obtained can be used to automatically generate an interactive timeline displaying the major events and topics covered by the corpus. To test the validity of our technique we extracted a large number of these topics from a test corpus and had human evaluators judge how well the selected features captured the gist of the topics, and how they overlapped with a set of known topics from the corpus. The resulting topics were highly rated by evaluators who compared them to known topics.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-312679</DOCNO>
+<TITLE>Deriving concept hierarchies from text</TITLE>
+<AUTHOR>Mark Sanderson, Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 22nd annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-312687</DOCNO>
+<TITLE>Cluster-based language models for distributed retrieval</TITLE>
+<AUTHOR>Jinxi Xu, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 22nd annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-312698</DOCNO>
+<TITLE>A general language model for information retrieval (poster abstract)</TITLE>
+<AUTHOR>Fei Song, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 22nd annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-290954</DOCNO>
+<TITLE>On-line new event detection and tracking</TITLE>
+<AUTHOR>James Allan, Ron Papka, Victor Lavrenko</AUTHOR>
+<SOURCE>Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-290958</DOCNO>
+<TITLE>Resolving ambiguity for cross-language retrieval</TITLE>
+<AUTHOR>Lisa Ballesteros, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-290987</DOCNO>
+<TITLE>Aspect windows, 3-D visualizations, and indirect comparisons of information retrieval systems</TITLE>
+<AUTHOR>Russell C. Swan, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-291008</DOCNO>
+<TITLE>A language modeling approach to information retrieval</TITLE>
+<AUTHOR>Jay M. Ponte, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-291043</DOCNO>
+<TITLE>Visual interactions with a multidimensional ranked list</TITLE>
+<AUTHOR>Anton Leouski, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-258540</DOCNO>
+<TITLE>Phrasal translation and query expansion techniques for cross-language information retrieval</TITLE>
+<AUTHOR>Lisa Ballesteros, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 20th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-258547</DOCNO>
+<TITLE>Computationally tractable probabilistic modeling of Boolean operators</TITLE>
+<AUTHOR>Warren R. Greiff, W. Bruce Croft, Howard Turtle</AUTHOR>
+<SOURCE>Proceedings of the 20th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-243202</DOCNO>
+<TITLE>Query expansion using local and global document analysis</TITLE>
+<AUTHOR>Jinxi Xu, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 19th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-243274</DOCNO>
+<TITLE>Incremental relevance feedback for information filtering</TITLE>
+<AUTHOR>James Allan</AUTHOR>
+<SOURCE>Proceedings of the 19th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-243276</DOCNO>
+<TITLE>Combining classifiers in text categorization</TITLE>
+<AUTHOR>Leah S. Larkey, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 19th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-215328</DOCNO>
+<TITLE>Searching distributed collections with inference networks</TITLE>
+<AUTHOR>James P. Callan, Zhihong Lu, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 18th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-215380</DOCNO>
+<TITLE>Relevance feedback with too much data</TITLE>
+<AUTHOR>James Allan</AUTHOR>
+<SOURCE>Proceedings of the 18th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-188586</DOCNO>
+<TITLE>The effect of adding relevance information in a relevance feedback environment</TITLE>
+<AUTHOR>Chris Buckley, Gerard Salton, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 17th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-160728</DOCNO>
+<TITLE>A comparison of indexing techniques for Japanese text retrieval</TITLE>
+<AUTHOR>Hideo Fujii, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 16th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+A series of Japanese full-text retrieval experiments were conducted using an inference network document retrieval model. The retrieval performance of two major indexing methods, character-based and word-based, were evaluated. Using structured queries, the character-based indexing performed retrieval as well as, or slightly better, than the word-based system. This result has practical significance since the character-based indexing speed is considerably faster than the traditional word-based indexing. All the queries in this experiment were automatically formulated from natural language input.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-160760</DOCNO>
+<TITLE>The effect multiple query representations on information retrieval system performance</TITLE>
+<AUTHOR>Nicholas J. Belkin, C. Cool, W. Bruce Croft, James P. Callan</AUTHOR>
+<SOURCE>Proceedings of the 16th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-160761</DOCNO>
+<TITLE>An evaluation of query processing strategies using the TIPSTER collection</TITLE>
+<AUTHOR>James P. Callan, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 16th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+The TIPSTER collection is unusual because of both its size and detail. In particular, it describes a set of information needs, as opposed to traditional queries. These detailed representations of information need are an opportunity for research on different methods of formulating queries. This paper describes several methods of constructing queries for the INQUERY information retrieval system, and then evaluates those methods on the TIPSTER document collection. Both AdHoc and Routing query processing methods are evaluated.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-160689</DOCNO>
+<TITLE>Relevance feedback and inference networks</TITLE>
+<AUTHOR>David Haines, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 16th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Relevance feedback, which modifies queries using judgements of the relevance of a few, highly-ranked documents, has historically been an important method for increasing the performance of information retrieval systems. In this paper, we extend the inference network model introduced by Turtle and Croft to include relevance feedback techniques. The difference between relevance feedback on text abstracts and full text collections is studied. Preliminary results for relevance feedback on the structured queries supported by the inference net model are also reported.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-133203</DOCNO>
+<TITLE>A loosely-coupled integration of a text retrieval system and an object-oriented database system</TITLE>
+<AUTHOR>W. Bruce Croft, Lisa A. Smith, Howard R. Turtle</AUTHOR>
+<SOURCE>Proceedings of the 15th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Document management systems are needed for many business applications. This type of system would combine the functionality of a database system, (for describing, storing and maintaining documents with complex structure and relationships) with a text retrieval system (for effective retrieval based on full text). The retrieval model for a document management system is complicated by the variety and complexity of the objects that are represented. In this paper, we describe an approach to complex object retrieval using a probabilistic inference net model, and an implementation of this approach using a loose coupling of an object-oriented database system (IRIS) and a text retrieval system based on inference nets (INQUERY). The resulting system is used to store long, structured documents and can retrieve document components (sections, figures, etc.) based on their contents or the contents of related components. The lessons learnt from the implementation are discussed.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-122864</DOCNO>
+<TITLE>The use of phrases and structured queries in information retrieval</TITLE>
+<AUTHOR>W. Bruce Croft, Howard R. Turtle, David D. Lewis</AUTHOR>
+<SOURCE>Proceedings of the 14th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-636811</DOCNO>
+<TITLE>The use of adaptive mechanisms for selection of search strategies in document retrival systems</TITLE>
+<AUTHOR>W. Bruce Croft, Roger H. Thompson</AUTHOR>
+<SOURCE>Proceedings of the 7th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+A document retrieval system can incorporate many types of flexibility. One example of this is the ability to choose a search strategy that is appropriate for a particular user and query. This paper investigates the use of adaptive mechanisms to control the selection of search strategies. The experimental results indicate that, although an adaptive mechanism is capable of learning the appropriate response in simple situations, there are serious problems with using them to make complex decisions in a document retrieval system.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-511797</DOCNO>
+<TITLE>Applications for information retrieval techniques in the office</TITLE>
+<AUTHOR>W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 6th annual international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-636717</DOCNO>
+<TITLE>The implementation of a document retrieval system</TITLE>
+<AUTHOR>W. Bruce Croft, Lynn Ruggles</AUTHOR>
+<SOURCE>Proceedings of the 5th annual ACM conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+The significant advances made in theoretical and experimental research in information retrieval have many implications for system design. One possible design for a document retrieval system based on these advances is presented. A major part of this system design has been implemented as a bibliography filing and retrieval system for the Computer Science department at the University of Massachusetts. The implementation issues considered here are functionality, user interface and file organization. The main point of this implementation was to demonstrate that an efficient, effective and flexible system can be constructed using modern techniques.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-511760</DOCNO>
+<TITLE>Incorporating different search models into one document retrieval system</TITLE>
+<AUTHOR>W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 4th annual international ACM SIGIR conference on Information storage and retrieval: theoretical issues in information retrieval</SOURCE>
+<TEXT>
+Many effective search strategies derived from different models are available for document retrieval systems. However, it does not appear that there is a single most effective strategy. Instead, different strategies perform optimally under different conditions. This paper outlines the design of an adaptive document retrieval system that chooses the best search strategy for a particular situation and user. In order to be able to support a variety of search strategies, a general network representation of the documents and terms in the database is proposed. This network representation leads to efficient methods of generating and using document and term classifications.One of the most desirable features of an adaptive system would be the ability to learn from experience. A method of incorporating this learning ability into the system is described. The adaptive control strategy for choosing search strategies enables the system to base its actions on a number of factors, including a model of the current user.Finally, some ideas for a flexible interface for casual users are suggested. Part of this interface is the heuristic search, which is used when searches based on formal models have failed. The heuristic search provides a browsing capability for the user.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-511717</DOCNO>
+<TITLE>On the implementation of some models of document retrieval</TITLE>
+<AUTHOR>W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 2nd annual international ACM SIGIR conference on Information storage and retrieval: information implications into the eighties</SOURCE>
+<TEXT>
+Recently several models of the search process in a document retrieval system have been proposed and retrieval experiments have shown that they will improve system performance. These include models which use relevance judgements to rank documents in order of probability of relevance and models of retrieval from clusters of documents. In this paper various models are compared in terms of the ease with which they could be implemented. An important consideration is how this implementation would be affected by the introduction of new hardware such as content-addressable memories. The main conclusion is that models which concentrate on improving the effectiveness of the search process are not rendered redundant by the availability of new hardware. However, the efficiency of their implementation would be improved.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-803136</DOCNO>
+<TITLE>A file organization for cluster-based retrieval</TITLE>
+<AUTHOR>W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 1st annual international ACM SIGIR conference on Information storage and retrieval</SOURCE>
+<TEXT>
+A file organization for cluster-based retrieval is presented and tested. This file organization is based on the bottom-up search which, in contrast to the more usual top-down search, starts at the lowest level of a cluster hierarchy (the documents) and looks at progressively larger clusters. This approach enables most of the efficiency problems previously associated with clustered file organizations to be avoided. There are two parts to this file organization - a compact cluster hierarchy representation which does not store cluster representatives and a compact inverted file which is used to provide a starting point for the bottom-up search. Retrieval experiments show that the bottom-up search using this file organization can be more effective than a serial search, especially if high precision results are required.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2484097</DOCNO>
+<TITLE>Extracting query facets from search results</TITLE>
+<AUTHOR>Weize Kong, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Web search queries are often ambiguous or multi-faceted, which makes a simple ranked list of results inadequate. To assist information finding for such faceted queries, we explore a technique that explicitly represents interesting facets of a query using groups of semantically related terms extracted from search results. As an example, for the query ``baggage allowance'', these groups might be different airlines, different flight types (domestic, international), or different travel classes (first, business, economy). We name these groups query facets and the terms in these groups facet terms. We develop a supervised approach based on a graphical model to recognize query facets from the noisy candidates found. The graphical model learns how likely a candidate term is to be a facet term as well as how likely two terms are to be grouped together in a query facet, and captures the dependencies between the two factors. We propose two algorithms for approximate inference on the graphical model since exact inference is intractable. Our evaluation combines recall and precision of the facet terms with the grouping quality. Experimental results on a sample of web queries show that the supervised method significantly outperforms existing approaches, which are mostly unsupervised, suggesting that query facet extraction can be effectively learned.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2484069</DOCNO>
+<TITLE>Task-aware query recommendation</TITLE>
+<AUTHOR>Henry Feild, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+When generating query recommendations for a user, a natural approach is to try and leverage not only the user's most recently submitted query, or reference query, but also information about the current search context, such as the user's recent search interactions. We focus on two important classes of queries that make up search contexts: those that address the same information need as the reference query (on-task queries), and those that do not (off-task queries). We analyze the effects on query recommendation performance of using contexts consisting of only on-task queries, only off-task queries, and a mix of the two. Using TREC Session Track data for simulations, we demonstrate that on-task context is helpful on average but can be easily overwhelmed when off-task queries are interleaved---a common situation according to several analyses of commercial search logs. To minimize the impact of off-task queries on recommendation performance, we consider automatic methods of identifying such queries using a state of the art search task identification technique. Our experimental results show that automatic search task identification can eliminate the effect of off-task queries in a mixed context. We also introduce a novel generalized model for generating recommendations over a search context. While we only consider query text in this study, the model can handle integration over arbitrary user search behavior, such as page visits, dwell times, and query abandonment. In addition, it can be used for other types of recommendation, including personalized web search.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2484096</DOCNO>
+<TITLE>Compact query term selection using topically related text</TITLE>
+<AUTHOR>K. Tamsin Maxwell, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Many recent and highly effective retrieval models for long queries use query reformulation methods that jointly optimize term weights and term selection. These methods learn using word context and global context but typically fail to capture query context. In this paper, we present a novel term ranking algorithm, PhRank, that extends work on Markov chain frameworks for query expansion to select compact and focused terms from within a query itself. This focuses queries so that one to five terms in an unweighted model achieve better retrieval effectiveness than weighted term selection models that use up to 30 terms. PhRank terms are also typically compact and contain 1-2 words compared to competing models that use query subsets up to 7 words long. PhRank captures query context with an affinity graph constructed using word co-occurrence in pseudo-relevant documents. A random walk of the graph is used for term ranking in combination with discrimination weights. Empirical evaluation using newswire and web collections demonstrates that performance of reformulated queries is significantly improved for long queries and at least as good for short, keyword queries compared to highly competitive information retrieval (IR) models.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2484060</DOCNO>
+<TITLE>Sentiment diversification with different biases</TITLE>
+<AUTHOR>Elif Aktolga, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Prior search result diversification work focuses on achieving topical variety in a ranked list, typically equally across all aspects. In this paper, we diversify with sentiments according to an explicit bias. We want to allow users to switch the result perspective to better grasp the polarity of opinionated content, such as during a literature review. For this, we first infer the prior sentiment bias inherent in a controversial topic -- the 'Topic Sentiment'. Then, we utilize this information in 3 different ways to diversify results according to various sentiment biases: (1) Equal diversification to achieve a balanced and unbiased representation of all sentiments on the topic; (2) Diversification towards the Topic Sentiment, in which the actual sentiment bias in the topic is mirrored to emphasize the general perception of the topic; (3) Diversification against the Topic Sentiment, in which documents about the 'minority' or outlying sentiment(s) are boosted and those with the popular sentiment are demoted. Since sentiment classification is an essential tool for this task, we experiment by gradually degrading the accuracy of a perfect classifier down to 40%, and show which diversification approaches prove most stable in this setting. The results reveal that the proportionality-based methods and our SCSF model, considering sentiment strength and frequency in the diversified list, yield the highest gains. Further, in case the Topic Sentiment cannot be reliably estimated, we show how performance is affected by equal diversification when actually an emphasis either towards or against the Topic Sentiment is desired: in the former case, an average of 6.48% is lost across all evaluation measures, whereas in the latter case this is 16.23%, confirming that bias-specific sentiment diversification is crucial.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2484139</DOCNO>
+<TITLE>Building a web test collection using social media</TITLE>
+<AUTHOR>Chia-Jung Lee, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Community Question Answering (CQA) platforms contain a large number of questions and associated answers. Answerers sometimes include URLs as part of the answers to provide further information. This paper describes a novel way of building a test collection for web search by exploiting the link information from this type of social media data. We propose to build the test collection by regarding CQA questions as queries and the associated linked web pages as relevant documents. To evaluate this approach, we collect approximately ten thousand CQA queries, whose answers contained links to ClueWeb09 documents after spam filtering. Experimental results using this collection show that the relative effectiveness between different retrieval models on the ClueWeb-CQA query set is consistent with that on the TREC Web Track query sets, confirming the reliability of our test collection. Further analysis shows that the large number of queries generated through this approach compensates for the sparse relevance judgments in determining significant differences.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2348296</DOCNO>
+<TITLE>Diversity by proportionality: an election-based approach to search result diversification</TITLE>
+<AUTHOR>Van Dang, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 35th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+This paper presents a different perspective on diversity in search results: diversity by proportionality. We consider a result list most diverse, with respect to some set of topics related to the query, when the number of documents it provides on each topic is proportional to the topic's popularity. Consequently, we propose a framework for optimizing proportionality for search result diversification, which is motivated by the problem of assigning seats to members of competing political parties. Our technique iteratively determines, for each position in the result ranked list, the topic that best maintains the overall proportionality. It then selects the best document on this topic for this position. We demonstrate empirically that our method significantly outperforms the top performing approach in the literature not only on our proposed metric for proportionality, but also on several standard diversity measures. This result indicates that promoting proportionality naturally leads to minimal redundancy, which is a goal of the current diversity approaches.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2348355</DOCNO>
+<TITLE>Generating reformulation trees for complex queries</TITLE>
+<AUTHOR>Xiaobing Xue, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 35th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Search queries have evolved beyond keyword queries. Many complex queries such as verbose queries, natural language question queries and document-based queries are widely used in a variety of applications. Processing these complex queries usually requires a series of query operations, which results in multiple sequences of reformulated queries. However, previous query representations, either the "bag of words" method or the recently proposed "query distribution" method, cannot effectively model these query sequences, since they ignore the relationships between two queries. In this paper, a reformulation tree framework is proposed to organize multiple sequences of reformulated queries as a tree structure, where each path of the tree corresponds to a sequence of reformulated queries. Specifically, a two-level reformulation tree is implemented for verbose queries. This tree effectively combines two query operations, i.e., subset selection and query substitution, within the same framework. Furthermore, a weight estimation approach is proposed to assign weights to each node of the reformulation tree by considering the relationships with other nodes and directly optimizing retrieval performance. Experiments on TREC collections show that this reformulation tree based representation significantly outperforms the state-of-the-art techniques.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2348408</DOCNO>
+<TITLE>Modeling higher-order term dependencies in information retrieval using query hypergraphs</TITLE>
+<AUTHOR>Michael Bendersky, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 35th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Many of the recent, and more effective, retrieval models have incorporated dependencies between the terms in the query. In this paper, we advance this query representation one step further, and propose a retrieval framework that models higher-order term dependencies, i.e., dependencies between arbitrary query concepts rather than just query terms. In order to model higher-order term dependencies, we represent a query using a hypergraph structure -- a generalization of a graph, where a (hyper)edge connects an arbitrary subset of vertices. A vertex in a query hypergraph corresponds to an individual query concept, and a dependency between a subset of these vertices is modeled through a hyperedge. An extensive empirical evaluation using both newswire and web corpora demonstrates that query representation using hypergraphs is highly beneficial for verbose natural language queries. For these queries, query hypergraphs significantly improve the retrieval effectiveness of several state-of-the-art models that do not employ higher-order term dependencies.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2348426</DOCNO>
+<TITLE>A framework for manipulating and searching multiple retrieval types</TITLE>
+<AUTHOR>Marc-Allen Cartright, Ethem F. Can, William Dabney, Jeff Dalton, Logan Giorda, Kriste Krstovski, Xiaoye Wu, Ismet Zeki Yalniz, James Allan, R. Manmatha, David A. Smith</AUTHOR>
+<SOURCE>Proceedings of the 35th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+Conventional retrieval systems view documents as a unit and look at different retrieval types within a document. We introduce Proteus, a frame-work for seamlessly navigating books as dynamic collections which are defined on the fly. Proteus allows us to search various retrieval types. Navigable types include pages, books, named persons, locations, and pictures in a collection of books taken from the Internet Archive. The demonstration shows the value of multi-type browsing in dynamic collections to peruse new data.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2348440</DOCNO>
+<TITLE>Task-aware search assistant</TITLE>
+<AUTHOR>Henry Allen Feild, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 35th international ACM SIGIR conference on Research and development in information retrieval</SOURCE>
+<TEXT>
+An abstract is not available.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2609628</DOCNO>
+<TITLE>Entity query feature expansion using knowledge base links</TITLE>
+<AUTHOR>Jeffrey Dalton, Laura Dietz, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval</SOURCE>
+<TEXT>
+Recent advances in automatic entity linking and knowledge base construction have resulted in entity annotations for document and query collections. For example, annotations of entities from large general purpose knowledge bases, such as Freebase and the Google Knowledge Graph. Understanding how to leverage these entity annotations of text to improve ad hoc document retrieval is an open research area. Query expansion is a commonly used technique to improve retrieval effectiveness. Most previous query expansion approaches focus on text, mainly using unigram concepts. In this paper, we propose a new technique, called entity query feature expansion (EQFE) which enriches the query with features from entities and their links to knowledge bases, including structured attributes and text. We experiment using both explicit query entity annotations and latent entities. We evaluate our technique on TREC text collections automatically annotated with knowledge base entity links, including the Google Freebase Annotations (FACC1) data. We find that entity-based feature expansion results in significant improvements in retrieval effectiveness over state-of-the-art text expansion approaches.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2609467</DOCNO>
+<TITLE>Diversifying query suggestions based on query documents</TITLE>
+<AUTHOR>Youngho Kim, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval</SOURCE>
+<TEXT>
+Many domain-specific search tasks are initiated by document-length queries, e.g., patent invalidity search aims to find prior art related to a new (query) patent. We call this type of search Query Document Search. In this type of search, the initial query document is typically long and contains diverse aspects (or sub-topics). Users tend to issue many queries based on the initial document to retrieve relevant documents. To help users in this situation, we propose a method to suggest diverse queries that can cover multiple aspects of the query document. We first identify multiple query aspects and then provide diverse query suggestions that are effective for retrieving relevant documents as well being related to more query aspects. In the experiments, we demonstrate that our approach is effective in comparison to previous query suggestion methods.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2609633</DOCNO>
+<TITLE>Searching, browsing, and clicking in a search session: changes in user behavior by task and over time</TITLE>
+<AUTHOR>Jiepu Jiang, Daqing He, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval</SOURCE>
+<TEXT>
+There are many existing studies of user behavior in simple tasks (e.g., navigational and informational search) within a short duration of 1--2 queries. However, we know relatively little about user behavior, especially browsing and clicking behavior, for longer search session solving complex search tasks. In this paper, we characterize and compare user behavior in relatively long search sessions (10 minutes; about 5 queries) for search tasks of four different types. The tasks differ in two dimensions: (1) the user is locating facts or is pursuing intellectual understanding of a topic; (2) the user has a specific task goal or has an ill-defined and undeveloped goal. We analyze how search behavior as well as browsing and clicking patterns change during a search session in these different tasks. Our results indicate that user behavior in the four types of tasks differ in various aspects, including search activeness, browsing style, clicking strategy, and query reformulation. As a search session progresses, we note that users shift their interests to focus less on the top results but more on results ranked at lower positions in browsing. We also found that results eventually become less and less attractive for the users. The reasons vary and include downgraded search performance of query, decreased novelty of search results, and decaying persistence of users in browsing. Our study highlights the lack of long session support in existing search engines and suggests different strategies of supporting longer sessions according to different task types.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2609503</DOCNO>
+<TITLE>Incorporating query-specific feedback into learning-to-rank models</TITLE>
+<AUTHOR>Ethem F. Can, W. Bruce Croft, R. Manmatha</AUTHOR>
+<SOURCE>Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval</SOURCE>
+<TEXT>
+Relevance feedback has been shown to improve retrieval for a broad range of retrieval models. It is the most common way of adapting a retrieval model for a specific query. In this work, we expand this common way by focusing on an approach that enables us to do query-specific modification of a retrieval model for learning-to-rank problems. Our approach is based on using feedback documents in two ways: 1) to improve the retrieval model directly and 2) to identify a subset of training queries that are more predictive than others. Experiments with the Gov2 collection show that this approach can obtain statistically significant improvements over two baselines; learning-to-rank (SVM-rank) with no feedback and learning-to-rank with standard relevance feedback.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2609485</DOCNO>
+<TITLE>Evaluating answer passages using summarization measures</TITLE>
+<AUTHOR>Mostafa Keikha, Jae Hyun Park, W. Bruce Croft</AUTHOR>
+<SOURCE>Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval</SOURCE>
+<TEXT>
+Passage-based retrieval models have been studied for some time and have been shown to have some benefits for document ranking. Finding passages that are not only topically relevant, but are also answers to the users' questions would have a significant impact in applications such as mobile search. To develop models for answer passage retrieval, we need to have appropriate test collections and evaluation measures. Making annotations at the passage level is, however, expensive and can have poor coverage. In this paper, we describe the advantages of document summarization measures for evaluating answer passage retrieval and show that these measures have high correlation with existing measures and human judgments.
+</TEXT>
+</DOC>
+<DOC>
+<DOCNO>ACM-2609536</DOCNO>
+<TITLE>Necessary and frequent terms in queries</TITLE>
+<AUTHOR>Jiepu Jiang, James Allan</AUTHOR>
+<SOURCE>Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval</SOURCE>
+<TEXT>
+Vocabulary mismatch has long been recognized as one of the major issues affecting search effectiveness. Ineffective queries usually fail to incorporate important terms and/or incorrectly include inappropriate keywords. However, in this paper we show another cause of reduced search performance: sometimes users issue reasonable query terms, but systems cannot identify the correct properties of those terms and take advantages of the properties. Specifically, we study two distinct types of terms that exist in all search queries: (1) necessary terms, for which term occurrence alone is indicative of document relevance; and (2) frequent terms, for which the relative term frequency is indicative of document relevance within the set of documents where the term appears. We evaluate these two properties of query terms in a dataset. Results show that only 1/3 of the terms are both necessary and frequent, while another 1/3 only hold one of the properties and the final third do not hold any of the properties. However, existing retrieval models do not clearly distinguish terms with the two properties and consider them differently. We further show the great potential of improving retrieval models by treating terms with distinct properties differently.
+</TEXT>
+</DOC>
